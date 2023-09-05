@@ -1,8 +1,8 @@
 input.onButtonPressed(Button.A, function () {
-	
+    game.setScore(5)
 })
 basic.forever(function () {
-    if (pins.digitalReadPin(DigitalPin.P0) == 0) {
+    if (pins.digitalReadPin(DigitalPin.P0) == 1) {
         game.addScore(1)
         game.addLife(0)
         music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.InBackground)
